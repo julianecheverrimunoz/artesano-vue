@@ -5,6 +5,7 @@
       <h2>Registro Pedidos</h2>
       <h3>Ingrese sus datos</h3>
       <form id="formulario_pedido" action="#" method="post">
+        <div id="datos_cliente">
         <label for="fecha">Fecha:</label>
         <input type="date" name="fecha" v-model="pedido.fecha" />
 
@@ -19,11 +20,15 @@
 
         <label for="email">Email: </label>
         <input type="email" name="email" v-model="pedido.email" />
-      </form>
+        </div>
+      
 
       <h3>Seleccione los Productos</h3>
 
-      <form id="formulario_productos" action="#" method="post">
+      
+
+      <!-- <form id="formulario_productos" action="#" method="post"> -->
+        <div id="datos_productos">
         <input
           type="checkbox"
           name="pan_artesanal"
@@ -86,7 +91,9 @@
         <label for="pastel_gloria">Pastel Gloria</label>
         <input type="number" name="qpgloria" id="" />
 
-      </form>
+        </div>
+
+      <!-- </form> -->
       <h3>Seleccione la forma de envio</h3>
       <label for="envio">Forma de Envio</label>
         <div>
@@ -95,6 +102,14 @@
           <input type="radio" name="envio" value="1" v-model="envio" id="" />
           Envio a Domicilio
         </div>
+
+        <button type="reset" name="limpiar">Limpiar</button>
+
+        <button @click.prevent="procesarInformacion()" type="button">
+          Agregar Evento
+        </button>
+
+        </form>
 
 
     </div>
@@ -130,11 +145,18 @@ export default {
       pgloria: false,
     }; //Cierre return
   }, //Cierre data
+
+  methods: {
+    borrarInformacion() {},
+
+  } // Cierre methods
+
+
 }; //cierre export default
 </script>
 
 <style scoped>
-#formulario_pedido {
+#datos_cliente {
   display: grid;
   grid-template-columns: 7.2rem 12rem;
   padding: 1rem;
@@ -143,7 +165,7 @@ export default {
   text-align: justify;
 }
 
-#formulario_productos {
+#datos_productos {
   display: grid;
   grid-template-columns: 2rem 9rem 9rem;
   padding: 1rem;
