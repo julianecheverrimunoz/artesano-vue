@@ -155,27 +155,27 @@ export default {
 </script>
 
 <style scoped>
-#datos_cliente {
-  display: grid;
-  grid-template-columns: 7.2rem 12rem;
-  padding: 1rem;
-  row-gap: 1rem;
-  column-gap: 0.5rem;
-  text-align: justify;
-}
+    #datos_cliente {
+      display: grid;
+      grid-template-columns: 7.2rem 12rem;
+      padding: 1rem;
+      row-gap: 1rem;
+      column-gap: 0.5rem;
+      text-align: justify;
+    }
 
-#datos_productos {
-  display: grid;
-  grid-template-columns: 2rem 9rem 9rem;
-  padding: 1rem;
-  row-gap: 1rem;
-  column-gap: 0.5rem;
-  text-align: justify;
-}
+    #datos_productos {
+      display: grid;
+      grid-template-columns: 2rem 9rem 9rem;
+      padding: 1rem;
+      row-gap: 1rem;
+      column-gap: 0.5rem;
+      text-align: justify;
+    }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  padding: 1rem;
+    main {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      padding: 1rem;
 }
 </style>
