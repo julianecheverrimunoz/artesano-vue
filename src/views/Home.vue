@@ -1,20 +1,21 @@
 <template>
   <div class="box h-8  bg-yellow-600">
         <div id="main-container">
-            <a href="https://wa.me/3195650570" target="_blank" class="btn btn-yellow">Pedidos</a>
-            <h3 >3195650570</h3>            
+            <router-link to="/pedidos">Pedidos</router-link>
+            <!--<a href="https://wa.me/3195650570" target="_blank" class="btn btn-yellow">Pedidos</a>-->
+            <h3 ></h3>            
         </div>      
         
     </div>
     <header>        
         <div id="menu" class="nav-bar flex wrap ">
-          <a id="logo" href="#"></a> <img src="assets/Logo Gramo a Gramo.png" alt="">      
+          <a  href="#"></a> <img id="logo" src="../assets/Logo_Gramo_Gramo.png"  alt="" class="transform hover:-translate-y-1 hover:scale-110"/>     
             <ul class="box h-12  bg-white bg-opacity-30 rounded-md  menu-links">                
-                <li class="transition transform hover:bg-yellow-200" ><a href="Page 2 - Quienes Somos.html">Quienes Somos</a></li>
+                <li class="transition transform hover:bg-yellow-200" ><router-link to="/about">Quienes Somos</router-link></li>
                 <li class="transition transform hover:bg-yellow-200" ><a href="Page 3 - Panes.html">Panaderia</a></li>
                 <li class="transition transform hover:bg-yellow-200" ><a href="Page 4 - Pasteleria.html">Pasteleria</a></li>
                 <li class="transition transform hover:bg-yellow-200" ><a href="Page 5 - Eventos.html">Eventos</a></li>
-                <li class="transition transform hover:bg-yellow-200" ><a href="Page 6 - Contacto.html">Contactenos</a></li>
+                <li class="transition transform hover:bg-yellow-200" ><router-link to="/contacto">Contacto</router-link></li>
             </ul>
         </div>                
         <!--</div class="fondo-home">-->   
@@ -28,14 +29,14 @@
 
     <main> 
         <section>
-            <div class="panes "> 
+            <div class="panes"> 
 
                 <h1 class="tx_panes" >Productos de <br>panaderia artesanal</h1>
 
                 <div class="m-28 relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-48 space-y-36 ">                   
                     <div class="space-y-6 self-end">
                         <h2>Espinaca</h2>
-                        <img src="img/Pan_Espinaca.png" alt="" class="espinaca">
+                        <img src="../assets/Pan_Espinaca.png" alt="" class="espinaca">
                         <p>
                             Pan preparado con extracto de
                             espinaca natural, llamativo en
@@ -45,7 +46,7 @@
                     
                     <div class="space-y-6">
                         <h2>Zanahoria</h2>
-                        <img src="img/Pan_Zanahoria.png" alt="" class="zanahoria">
+                        <img src="../assets/Pan_Zanahoria.png" alt="" class="zanahoria">
                         <p>
                             Pan preparado ralladura y
                             extracto de zanahoria, con sabor
@@ -55,7 +56,7 @@
 
                     <div class="space-y-6">
                         <h2>Brioche</h2>
-                        <img src="img/Pan_Brioche.png" alt="" class="brioche">
+                        <img src="../assets/Pan_Brioche.png" alt="" class="brioche">
                         <p>
                             Pan aliñado de masa suave, con un
                             porcentaje alto de margarina y
@@ -66,7 +67,7 @@
                 
                     <div class="space-y-6">
                         <h2>Artesano</h2>
-                        <img src="img/Pan_Artesano.png" alt="" class="artesano">
+                        <img src="../assets/Pan_Artesano.png" alt="" class="artesano">
                         <p>
                             Pan de corteza con alto porcentaje
                             de fermento.
@@ -75,7 +76,7 @@
 
                     <div class="space-y-6">
                         <h2>Multigrano</h2>
-                        <img src="img/Pan_MultiGranos.png" alt="" height=" " class="multigrano">
+                        <img src="../assets/Pan_MultiGranos.png" alt="" height=" " class="multigrano">
                         <p>
                             Pan que posee semillas de ajonjolí,
                             lino amarillo y marrón, mijo,
@@ -86,7 +87,7 @@
 
                     <div class="space-y-6">
                         <h2>Intefral</h2>
-                        <img src="img/Pan_Integral.png" alt="" class="integral">
+                        <img src="../assets/Pan_Integral.png" alt="" class="integral">
                         <p>
                             Pan de harina 100% integral.
                         </p>
@@ -107,10 +108,10 @@
                     cumplir todas las necesidades de nuestros clientes.
                 </p>
                 <div class="m-16 grid grid-cols-1 xl:grid-cols-2 gap-10 my-4">
-                    <img src="img/Pasteleria_1.png" alt="">
-                    <img src="img/Pasteleria_2.png" alt="">
-                    <img src="img/Pasteleria_3.png" alt="">
-                    <img src="img/Pasteleria_4.png" alt="">
+                    <img src="../assets/Pasteleria_1.png" alt="">
+                    <img src="../assets/Pasteleria_2.png" alt="">
+                    <img src="../assets/Pasteleria_3.png" alt="">
+                    <img src="../assets/Pasteleria_4.png" alt="">
                 
                 </div>
                 <p>
@@ -130,10 +131,10 @@
                     manejamos rango de precios.
                 </p>
                 <div class="m-16 grid grid-cols-1 xl:grid-cols-2 ">
-                    <img src="img/Eventos_1.png" alt="">
-                    <img src="img/Eventos_2.png" alt="">
-                    <img src="img/Eventos_3.png" alt="">
-                    <img src="img/Eventos_4.png" alt="">     
+                    <img src="../assets/Eventos_1.png" alt="">
+                    <img src="../assets/Eventos_2.png" alt="">
+                    <img src="../assets/Eventos_3.png" alt="">
+                    <img src="../assets/Eventos_4.png" alt="">     
                 </div>
             </div>
         </section> 
@@ -177,31 +178,29 @@ export default {
 
 /*@font-face {
     font-family: titulos;
-    src: url(fuentes/DeliusSwashCaps-Regular.ttf);
+    src: url(../assets/fuentes/DeliusSwashCaps-Regular.ttf);
 }  
 @font-face {
     font-family:dulce ;
-    src: url(fuentes/Dulcelin.otf);  
+    src: url(../assets/fuentes/Dulcelin.otf);  
 }*/
 template{
     position: relative;
-    padding: 3rem;
+    
 }
 .nav-bar{
    display: flex; 
    justify-content: space-between;
 }
 #logo{
-    position: absolute;
-    width: 21.0625rem;
-    height: 13.9375rem;
-    left: 3.4375rem;
-    top: 4.25rem;
+    
+    width: 21.0625rem;   
+    
 /*backraun imagen principal*/
 }
 header{
     
-    /*background-image: url(img/assets/fondo_home.JPG);*/
+    /*background-image: url(@/assets/Fondo_home.JPG);*/
     background-size: 100%;
     background-position: center;
     height: 25rem;
@@ -211,7 +210,6 @@ a{
     color: #794425;
     font-size: 1.125rem;  
 }
-
 
 .menu-links li{
     display: inline;          
@@ -231,24 +229,21 @@ h2{
     color: #794425;
     font-size: 4rem;   
     text-align: center;
-    font-family: dulce;   
-    
+    font-family: dulce;       
     } 
     
     p{
         color: #070707;
         font-size: 24px;
         text-align: center;
-        font-family: titulos; 
-        
-    }  
-  
+        font-family: titulos;         
+    }    
     .panes{
           
         width: 100%;
         height: 91.375rem;
         display: inline-block;
-         
+        padding: 10rem;         
     
     }
     .tx_panes{
@@ -264,16 +259,16 @@ h2{
         height: 98.625rem;       
         margin-top: 18.75rem;
         display: inline-block;
+        padding: 4rem;
     }  
     .eventos{
         position: relative;
         width: 100%;
         height: 115.9375rem;
-        
+        padding: 4rem;
         display: inline-block;
 
-    } 
-       
+    }       
       
     .panes img{
 

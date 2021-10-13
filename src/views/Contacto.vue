@@ -8,7 +8,7 @@
             <h3 ></h3>            
         </div>   
             
-			<img width= "250px" src="src\assets\Logo Gramo a Gramo.png" alt="" class="transform hover:-translate-y-1 hover:scale-110"/> 	
+			<a  href="#"></a> <img id="logo" src="../assets/Logo_Gramo_Gramo.png"  alt="" class="transform hover:-translate-y-1 hover:scale-110"/>  	
 		</div>  			
 		
 	<body >	
@@ -64,6 +64,11 @@
 	</footer>		
 </template>
 <style scoped>
+#logo{
+    
+    width: 21.0625rem;  
+	}
+
 	form {
 				/* Just to center the form on the page */
 				margin: 0 auto;

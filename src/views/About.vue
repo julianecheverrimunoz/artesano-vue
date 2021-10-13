@@ -11,9 +11,9 @@
     </div>
     <header>        
         <div id="menu" class="nav-bar flex wrap ">
-            <a id="logo" href="#"></a> <img width="337px" src="src\assets\Logo Gramo a Gramo.png" alt="" class="transform hover:-translate-y-1 hover:scale-110"/>           
+            <a  href="#"></a> <img id="logo" src="../assets/Logo_Gramo_Gramo.png"  alt="" class="transform hover:-translate-y-1 hover:scale-110"/>            
             <ul class="box h-12  bg-white bg-opacity-30 rounded-md  menu-links">                
-                <li class="transition transform hover:bg-yellow-200" ><a href="Page 2 - Quienes Somos.html">Quienes Somos</a></li>
+                <li class="transition transform hover:bg-yellow-200" ><router-link to="/">Inicio</router-link></li>
                 <li class="transition transform hover:bg-yellow-200" ><a href="Page 3 - Panes.html">Panaderia</a></li>
                 <li class="transition transform hover:bg-yellow-200" ><a href="Page 4 - Pasteleria.html">Pasteleria</a></li>
                 <li class="transition transform hover:bg-yellow-200" ><a href="Page 5 - Eventos.html">Eventos</a></li>
@@ -32,7 +32,7 @@
   
     <main>
         <div class="img1">
-            <img height="240px" src="img/Quienes_1.jpg" alt="">
+            <img height="240px" src="../assets/Quienes_1.jpg" alt="">
 
         </div>
 
@@ -45,7 +45,7 @@
 
         <div class="img2">
 
-            <img height="240px" src="img/Quienes_2.jpg" alt="">
+            <img height="240px" src="../assets/Quienes_2.jpg" alt="">
         </div>
 
         <div class="txt2">
@@ -59,7 +59,7 @@
         </div>
 
         <div class="img3">
-            <img height="240px" src="img/Quienes_3.jpg" alt="">
+            <img height="240px" src="../assets/Quienes_3.jpg" alt="">
 
         </div>
 
@@ -73,7 +73,7 @@
 
         <div class="img4">
 
-            <img height="240px" src="img/Quienes_4.jpg" alt="">
+            <img height="240px" src="../assets/Quienes_4.jpg" alt="">
         </div>
 
         <div class="txt4">
@@ -83,7 +83,7 @@
         </div>
 
         <div class="img5">
-            <img height="240px" src="img/Quienes_5.jpg" alt="">
+            <img height="240px" src="../assets/Quienes_5.jpg" alt="">
 
         </div>
 
@@ -95,7 +95,7 @@
 
         <div class="img6">
 
-            <img height="240px" src="img/Quienes_6.jpg" alt="">
+            <img height="240px" src="../assets/Quienes_6.jpg" alt="">
         </div>
 
         <div class="txt6">
@@ -147,9 +147,7 @@
 #logo{
     position: absolute;
     width: 21.0625rem;
-    height: 13.9375rem;
-    left: 3.4375rem;
-    top: 4.25rem;
+   
 /*backraun imagen principal*/
 }
 a{
@@ -183,6 +181,7 @@ a{
             grid-template-rows: repeat(6, 1fr);
             align-items: center;
             font-size: 2rem;
+            padding: 2rem;
 
         }
 
