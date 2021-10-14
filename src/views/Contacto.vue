@@ -8,7 +8,7 @@
             <h3 ></h3>            
         </div>   
             
-			<a  href="#"></a> <img id="logo" src="../assets/Logo_Gramo_Gramo.png"  alt="" class="transform hover:-translate-y-1 hover:scale-110"/>  	
+			<router-link to="/"><img id="logo" src="../assets/Logo_Gramo_Gramo.png"  alt="" class="transform hover:-translate-y-1 hover:scale-110"/></router-link>   	
 		</div>  			
 		
 	<body >	
@@ -43,25 +43,30 @@
 					<textarea id="msg" name="user_message"></textarea>
 					</span>
 				</li>
-				<!--<li class="button">
-					<button class="transition duration-500 ease-in-out bg-yellow-800 hover:bg-yellow-200 transform hover:-translate-y-1 hover:scale-110">
+				<li class="button transition duration-500 ease-in-out bg-yellow-800 hover:bg-yellow-200 transform hover:-translate-y-1 hover:scale-110">
+					<!--<button class="transition duration-500 ease-in-out bg-yellow-800 hover:bg-yellow-200 transform hover:-translate-y-1 hover:scale-110">-->
 					Contactame
-				</li>-->
+				</li>
 			</ul>
 		</form>
 	</header>
 	<footer class="box h-36" > 
-		<div class="box h-6  bg-yellow-200 "></div>
-		<div class="box h-3  bg-yellow-800 "></div>
-		<!--<div class="md:object-top flex justify-center">           
-				<div>  
-				<a class="m-2 p-4" href="https://www.facebook.com/Gramoagramopanartesano/" target="_blank"><img src="img/icons8-facebook-nuevo.svg" alt="" class="transform hover:-translate-y-1 hover:scale-110">
-				</div>	
-				<div>  
-				<a class="m-2 p-4" href="https://www.instagram.com/gramoagramopanartesano/?hl=es-la" target="_blank"><img src="img/icons8-instagram.svg" alt="" class="transform hover:-translate-y-1 hover:scale-110">
-				</div>	
-		</div>-->
-	</footer>		
+        <div class="box h-6 bg-yellow-200 "></div>
+        <div class="box h-3 bg-yellow-800 "></div>
+        <div class="md:object-top flex justify-center">           
+            <div>  
+                <a class="m-2 p-4" href="https://www.facebook.com/Gramoagramopanartesano/" target="_blank">
+                    <img src="../assets/icons8_facebook_nuevo.svg" alt="" class="transform hover:-translate-y-1 hover:scale-110">
+                </a>
+            </div>
+            <div>  
+                <a class="m-2 p-4" href="https://www.instagram.com/gramoagramopanartesano/?hl=es-la" target="_blank">
+                    <img src="../assets/icons8_instagram.svg" alt="" class="transform hover:-translate-y-1 hover:scale-110">
+                </a>
+            </div>
+
+        </div>
+    </footer>	
 </template>
 <style scoped>
 #logo{
@@ -143,7 +148,7 @@
 		
 		header{
     
-			/*background-image: url( src\assets\Fondo_contactenos.jpg);*/
+			background-image: url( ../assets/Fondo_contactenos.jpg);
 			background-size: 100%;
 			background-position: center;
 			height: 100%;

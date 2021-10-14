@@ -9,32 +9,30 @@
     </div>
     <header>        
         <div id="menu" class="nav-bar flex wrap ">
-          <a  href="#"></a> <img id="logo" src="../assets/Logo_Gramo_Gramo.png"  alt="" class="transform hover:-translate-y-1 hover:scale-110"/>     
-            <ul class="box h-12  bg-white bg-opacity-30 rounded-md  menu-links">                
+          <router-link to="/"><img id="logo" src="../assets/Logo_Gramo_Gramo.png"  alt="" class="transform hover:-translate-y-1 hover:scale-110"/></router-link>       
+            <ul class="box h-12 bg-white bg-opacity-30 rounded-md  menu-links ">                
                 <li class="transition transform hover:bg-yellow-200" ><router-link to="/about">Quienes Somos</router-link></li>
-                <li class="transition transform hover:bg-yellow-200" ><a href="Page 3 - Panes.html">Panaderia</a></li>
-                <li class="transition transform hover:bg-yellow-200" ><a href="Page 4 - Pasteleria.html">Pasteleria</a></li>
-                <li class="transition transform hover:bg-yellow-200" ><a href="Page 5 - Eventos.html">Eventos</a></li>
+                <li class="transition transform hover:bg-yellow-200" ><a href="#pan">Panaderia</a></li>
+                <li class="transition transform hover:bg-yellow-200" ><a href="#pastel">Pasteleria</a></li>
+                <li class="transition transform hover:bg-yellow-200" ><a href="#e">Eventos</a></li>
                 <li class="transition transform hover:bg-yellow-200" ><router-link to="/contacto">Contacto</router-link></li>
             </ul>
         </div>                
         <!--</div class="fondo-home">-->   
         <div class="bg-no-repeat bg-right-top " style="background-image:">  
         <!--BODY<img width="1440px" src="img/fondo_home.JPG" alt=""/>-->
-        </div>    
+        </div>
+            
     </header>   
-
-
-<!--MAIN-->
+<div class="box  h-6  bg-yellow-200 "></div>
+        <div class="box h-3  bg-yellow-800 "></div>
 
     <main> 
-        <section>
-            <div class="panes"> 
-
+        <section >
+            <div class="panes" id="pan"> 
                 <h1 class="tx_panes" >Productos de <br>panaderia artesanal</h1>
-
                 <div class="m-28 relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-48 space-y-36 ">                   
-                    <div class="space-y-6 self-end">
+                    <div class="space-y--10 self-end">
                         <h2>Espinaca</h2>
                         <img src="../assets/Pan_Espinaca.png" alt="" class="espinaca">
                         <p>
@@ -101,7 +99,7 @@
             </div>
         </section>
         <section>
-            <div class="pasteleria">
+            <div class="pasteleria" id="pastel">
                 <h1> Productos de <br>pasteleria</h1>
                 <p>
                     Poseemos un amplio portafolio de productos de pastelería <br> y postres para
@@ -123,7 +121,7 @@
         <div class="box h-3  bg-yellow-800 "></div>
         </section> 
         <section>
-            <div class=" eventos">
+            <div class="eventos" id="e">
                 <h1> Productos para <br> eventos</h1>
                 <p>
                     También atendemos todo tipo de eventos familiares y empresariales con mesas
@@ -134,28 +132,28 @@
                     <img src="../assets/Eventos_1.png" alt="">
                     <img src="../assets/Eventos_2.png" alt="">
                     <img src="../assets/Eventos_3.png" alt="">
-                    <img src="../assets/Eventos_4.png" alt="">     
+                    <img src="../assets/Eventos_4.png" alt="">
                 </div>
             </div>
         </section> 
-    </main>
+    </main>     
 
-    <aside>
-    </aside> 
-
-    <footer class="box h-36 " > 
-        <div class="box h-6  bg-yellow-200 "></div>
-       <!-- <div class="box h-3  bg-yellow-800 "></div>
+    <footer class="box h-36" > 
+        <div class="box h-6 bg-yellow-200 "></div>
+        <div class="box h-3 bg-yellow-800 "></div>
         <div class="md:object-top flex justify-center">           
             <div>  
-            <a class="m-2 p-4" href="https://www.facebook.com/Gramoagramopanartesano/" target="_blank"><img src="img/icons8-facebook-nuevo.svg" alt="" class="transform hover:-translate-y-1 hover:scale-110">
+                <a class="m-2 p-4" href="https://www.facebook.com/Gramoagramopanartesano/" target="_blank">
+                    <img src="../assets/icons8_facebook_nuevo.svg" alt="" class="transform hover:-translate-y-1 hover:scale-110">
+                </a>
             </div>
-
             <div>  
-            <a class="m-2 p-4" href="https://www.instagram.com/gramoagramopanartesano/?hl=es-la" target="_blank"><img src="img/icons8-instagram.svg" alt="" class="transform hover:-translate-y-1 hover:scale-110">
+                <a class="m-2 p-4" href="https://www.instagram.com/gramoagramopanartesano/?hl=es-la" target="_blank">
+                    <img src="../assets/icons8_instagram.svg" alt="" class="transform hover:-translate-y-1 hover:scale-110">
+                </a>
             </div>
 
-        </div>-->
+        </div>
     </footer>
 
 </template>
@@ -176,14 +174,14 @@ export default {
     padding: 0;
 }
 
-/*@font-face {
+@font-face {
     font-family: titulos;
-    src: url(../assets/fuentes/DeliusSwashCaps-Regular.ttf);
+    src: url(../assets/Fuentes/DeliusSwashCaps-Regular.ttf);
 }  
 @font-face {
     font-family:dulce ;
-    src: url(../assets/fuentes/Dulcelin.otf);  
-}*/
+    src: url(../assets/Fuentes/Dulcelin.otf);  
+}
 template{
     position: relative;
     
@@ -195,12 +193,12 @@ template{
 #logo{
     
     width: 21.0625rem;   
-    
+   
 /*backraun imagen principal*/
 }
 header{
     
-    /*background-image: url(@/assets/Fondo_home.JPG);*/
+    background-image: url(../assets/fondo.jpg);
     background-size: 100%;
     background-position: center;
     height: 25rem;
@@ -239,32 +237,26 @@ h2{
         font-family: titulos;         
     }    
     .panes{
-          
+     position: relative;   
         width: 100%;
         height: 91.375rem;
         display: inline-block;
         padding: 10rem;         
-    
-    }
-    .tx_panes{
-        position: relative;
-        width: 46.5rem;
-        height: 5.75rem;
-        left: calc(50% - 46.5rem/2 + 0.4375rem);
-        top: 2.8125rem;
-    }
+     margin-top: -10rem;
+    }   
+     
     .pasteleria{
         position: relative; 
         width: 100%;
         height: 98.625rem;       
-        margin-top: 18.75rem;
+        margin-top: 30rem;
         display: inline-block;
         padding: 4rem;
     }  
     .eventos{
         position: relative;
         width: 100%;
-        height: 115.9375rem;
+        height: auto;
         padding: 4rem;
         display: inline-block;
 
@@ -308,11 +300,10 @@ h2{
     
 }
  .linea{
-    position: absolute;
-    height: 6.25rem;
+    position: absolute;    
     left: 0rem;
     right: 0rem;
-    top: 134.375rem;
+    top: 140rem;
     
  }
  /*boton de pedidos
@@ -354,8 +345,7 @@ h2{
 /*posiciona y da color al footer*/
 footer{
     background: #E8A155;
-    position: relative;
-    width: 90rem;
+    position: relative;    
     height: 9.875rem;
     left: 0rem;
     bottom: 0;    

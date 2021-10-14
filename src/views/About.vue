@@ -11,12 +11,10 @@
     </div>
     <header>        
         <div id="menu" class="nav-bar flex wrap ">
-            <a  href="#"></a> <img id="logo" src="../assets/Logo_Gramo_Gramo.png"  alt="" class="transform hover:-translate-y-1 hover:scale-110"/>            
+            <router-link to="/"><img id="logo" src="../assets/Logo_Gramo_Gramo.png"  alt="" class="transform hover:-translate-y-1 hover:scale-110"/></router-link>             
             <ul class="box h-12  bg-white bg-opacity-30 rounded-md  menu-links">                
                 <li class="transition transform hover:bg-yellow-200" ><router-link to="/">Inicio</router-link></li>
-                <li class="transition transform hover:bg-yellow-200" ><a href="Page 3 - Panes.html">Panaderia</a></li>
-                <li class="transition transform hover:bg-yellow-200" ><a href="Page 4 - Pasteleria.html">Pasteleria</a></li>
-                <li class="transition transform hover:bg-yellow-200" ><a href="Page 5 - Eventos.html">Eventos</a></li>
+                
                 <li class="transition transform hover:bg-yellow-200" ><router-link to="/contacto">Contacto</router-link></li>
             </ul>
         </div>                
@@ -29,7 +27,8 @@
             </p>
         </div>   
     </header>
-  
+  <div class="box  h-6  bg-yellow-200 "></div>
+        <div class="box h-3  bg-yellow-800 "></div>
     <main>
         <div class="img1">
             <img height="240px" src="../assets/Quienes_1.jpg" alt="">
@@ -105,10 +104,22 @@
         </div>
 
     </main>
-    <footer class="box h-36 " > 
-        <div class="box h-6  bg-yellow-200 "></div>
-        <div class="box h-3  bg-yellow-800 "></div>
-       
+    <footer class="box h-36" > 
+        <div class="box h-6 bg-yellow-200 "></div>
+        <div class="box h-3 bg-yellow-800 "></div>
+        <div class="md:object-top flex justify-center">           
+            <div>  
+                <a class="m-2 p-4" href="https://www.facebook.com/Gramoagramopanartesano/" target="_blank">
+                    <img src="../assets/icons8_facebook_nuevo.svg" alt="" class="transform hover:-translate-y-1 hover:scale-110">
+                </a>
+            </div>
+            <div>  
+                <a class="m-2 p-4" href="https://www.instagram.com/gramoagramopanartesano/?hl=es-la" target="_blank">
+                    <img src="../assets/icons8_instagram.svg" alt="" class="transform hover:-translate-y-1 hover:scale-110">
+                </a>
+            </div>
+
+        </div>
     </footer>
 
 </template>
@@ -120,6 +131,14 @@
             grid-template-columns: 2fr;
             grid-template-rows: 60rem 5rem max max-content 1fr 2.5rem;
         }
+        header{
+    
+            background-image: url( ../assets/Fondo_quienesSomos.jpg);
+            background-size: 100%;
+            background-position: center;
+            height: 31.25rem;
+            background-repeat: no-repeat;    
+}
 
         h3{
             color: #f7f1ee;
@@ -283,11 +302,11 @@ a{
         }
         footer{
     background: #E8A155;
-    position: absolute;
-    width: 90rem;
+    position: relative;
+  
     height: 9.875rem;
-    left: 0px;
-    
+    left: 0rem;
+    bottom: 0;    
     margin-top: auto;
 }
 /*boton de pedidos
