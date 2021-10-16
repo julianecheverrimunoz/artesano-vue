@@ -58,40 +58,55 @@
             <input
               type="checkbox"
               name="pan_artesanal"
-              v-model="artesanal"
-              value="Si"
+              v-model="nombrePanes"
+              value="Pan Artesanal"
               id=""
             />
             <label for="pan_artesanal">Pan Artesanal</label>
             <!-- <input v-if="artesanal" type="number" name="qartesanal" /> -->
-            <input type="number" name="qartesanal" id="" />
+            <input
+              v-model.number="qartesanal"
+              type="number"
+              name="qartesanal"
+              id=""
+            />
 
             <input
               type="checkbox"
               name="pan_brioche"
-              v-model="brioche"
-              value="Si"
+              v-model="nombrePanes"
+              value="Pan Brioche"
               id=""
             />
             <label for="pan_brioche">Pan Brioche</label>
             <!-- <input v-if="brioche" type="number" name="qbrioche" /> -->
-            <input type="number" name="qbrioche" id="" />
+            <input
+              type="number"
+              name="qbrioche"
+              id=""
+              v-model.number="qbrioche"
+            />
 
             <input
               type="checkbox"
               name="pan_multigranos"
-              v-model="multigranos"
-              value="Si"
+              v-model="nombrePanes"
+              value="Pan Multigranos"
               id=""
             />
             <label for="pan_multigranos">Pan Multigranos</label>
-            <input type="number" name="qmultigranos" id="" />
+            <input
+              type="number"
+              name="qmultigranos"
+              id=""
+              v-model="qmultigranos"
+            />
 
             <input
               type="checkbox"
               name="pastel_pollo"
               v-model="ppollo"
-              value="Si"
+              value="Pastel de Pollo"
               id=""
             />
             <label for="pastel_pollo">Pastel de Pollo</label>
@@ -145,30 +160,28 @@
       <div>
         <h2>Resumen del Pedido</h2>
         <table>
-          
-            <tr>
-              <th>Fecha:</th>
-              <td>{{ pedido.fecha }}</td>
-            </tr>
-            <tr>
-              <th>Nombre:</th>
-              <td>{{ pedido.nombre }}</td>
-            </tr>
-            <tr>
-              <th>Documento:</th>
-              <td>{{ pedido.documento }}</td>
-            </tr>
+          <tr>
+            <th>Fecha:</th>
+            <td>{{ pedido.fecha }}</td>
+          </tr>
+          <tr>
+            <th>Nombre:</th>
+            <td>{{ pedido.nombre }}</td>
+          </tr>
+          <tr>
+            <th>Documento:</th>
+            <td>{{ pedido.documento }}</td>
+          </tr>
 
-            <tr>
-              <th>Telefono:</th>
-              <td>{{ pedido.telefono }}</td>
-            </tr>
+          <tr>
+            <th>Telefono:</th>
+            <td>{{ pedido.telefono }}</td>
+          </tr>
 
-            <tr>
-              <th>Email:</th>
-              <td>{{ pedido.email }}</td>
-            </tr>
-          
+          <tr>
+            <th>Email:</th>
+            <td>{{ pedido.email }}</td>
+          </tr>
 
           <table>
             <tr>
@@ -178,13 +191,40 @@
               <th>Precio Total</th>
             </tr>
             <tr>
-              <td>Pan Artesanal</td>
-              <td>10</td>
-              <td>700</td>
+              <td>{{ nombrePanes[0] }}</td>
+              <td>{{ qartesanal }}</td>
+              <td>{{ precioPanes[0] }}</td>
               <td>7000</td>
             </tr>
+            <tr>
+              <td>{{ nombrePanes[1] }}</td>
+              <td>{{ qbrioche }}</td>
+              <td>{{ precioPanes[1] }}</td>
+              <td>7000</td>
+            </tr>
+            <tr>
+              <td>{{ nombrePanes[2] }}</td>
+              <td>{{ qmultigranos }}</td>
+              <td>{{ precioPanes[2] }}</td>
+              <td>7000</td>
+            </tr>
+            <tr>
+              <td>{{ nombrePasteles[0] }}</td>
+              <td>{{ qppollo }}</td>
+              <td>{{ preciosPasteles[0] }}</td>
+              <td>7000</td>
+            </tr>
+            <tr>
+              <td>{{ nombrePasteles[1] }}</td>
+              <td>{{ qpcarne }}</td>
+              <td>{{ preciosPasteles[1] }}</td>
+              <td>7000</td>
+            </tr>
+            <td>{{ nombrePasteles[2] }}</td>
+            <td>{{ qpgloria }}</td>
+            <td>{{ preciosPasteles[2] }}</td>
+            <td>7000</td>
           </table>
-
         </table>
       </div>
     </main>
@@ -227,6 +267,13 @@
 export default {
   data() {
     return {
+      // nombrePanes: [],
+      nombrePanes: ["Pan Artesanal", "Pan Brioche", "Pan Multigranos"],
+      precioPanes: [700, 1000, 900],
+
+      nombrePasteles: ["Pastel de Pollo", "Pastel de Carne", "Pastel Gloria"],
+      preciosPasteles: [3000, 2700, 2600],
+
       listaPanes: [
         {
           nombre: "Pan Artesanal",
@@ -258,18 +305,18 @@ export default {
       ], // Cierre listaPasteles
 
       pedido: {
-        fecha:"", //new Date(), //.toISOString().substr(0, 11),
+        fecha: new Date().toISOString().substr(0, 10),
         nombre: "",
         documento: "",
         telefono: "",
         email: "",
-        qartesanal: "",
-        qbrioche: "",
-        qmultigranos: "",
-        qppollo: "",
-        qpcarne: "",
-        qpgloria: "",
-        envio: "",
+        qartesanal: 0,
+        qbrioche: 0,
+        qmultigranos: 0,
+        qppollo: 0,
+        qpcarne: 0,
+        qpgloria: 0,
+        envio: 0,
       }, // Cierre pedido
 
       artesanal: false,
